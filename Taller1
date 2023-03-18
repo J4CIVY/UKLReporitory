@@ -1,0 +1,127 @@
+//Punto 2
+
+import java.util.Scanner;
+public class Main {
+
+        public static void main(String[] args) {
+            Scanner entrada = new Scanner(System.in);
+
+            System.out.print("Ingrese la cantidad de veces que quiere hacer el cálculo: ");
+            int cantidadCalculos = entrada.nextInt();
+
+            for (int calculos = 0; calculos < cantidadCalculos; calculos++) {
+                System.out.println("Operacion " + (calculos+1));
+
+                System.out.print("Ingrese El Primer Número: ");
+                int numero1 = entrada.nextInt();
+
+                System.out.print("Ingrese El Segundo Número: ");
+                int numero2 = entrada.nextInt();
+
+                System.out.print("Ingrese El Tercer Número: ");
+                int numero3 = entrada.nextInt();
+
+                System.out.print("Ingrese el numero corespondiente a la operación matematica que desea realizar: \n" +
+                        "1 -> Suma \n" +
+                        "2 -> Resta \n" +
+                        "3 -> Multiplicacion \n" +
+                        "4 -> Division \n" +
+                        "5 -> Modulo \n");
+                int operacion = entrada.nextInt();
+
+                int resultado = 0;
+
+                switch (operacion) {
+                    case 1:
+                        resultado = numero1 + numero2 + numero3;
+                        break;
+                    case 2:
+                        resultado = numero1 - numero2 - numero3;
+                        break;
+                    case 3:
+                        resultado = numero1 * numero2 * numero3;
+                        break;
+                    case 4:
+                        resultado = numero1 / numero2 / numero3;
+                        break;
+                    case 5:
+                        resultado = numero1 % numero2 % numero3;
+                        break;
+                    default:
+                        System.out.println("Operación inválida");
+                        break;
+                }
+
+                System.out.println("El resultado es: " + resultado);
+            }
+        }
+    }
+    
+//punto 3
+
+import java.util.Scanner;
+public class Main {
+        public static void main(String[] args) {
+            Scanner entrada = new Scanner(System.in);
+
+            System.out.print("Ingrese la cantidad de veces que quiere hacer la operacion: ");
+            int cantidadCalculos = entrada.nextInt();
+
+            for (int calculos = 0; calculos < cantidadCalculos; calculos++) {
+                System.out.println("Cálculo " + (calculos+1));
+
+                System.out.print("Ingrese el primer valor booleano (true o false): ");
+                boolean valor1 = entrada.nextBoolean();
+
+                System.out.print("Ingrese el segundo valor booleano (true o false): ");
+                boolean valor2 = entrada.nextBoolean();
+
+                System.out.print("Ingrese la operación a realizar: \n" +
+                        "1 -> OR \n" +
+                        "2 -> AND \n" +
+                        "3 -> XOR");
+                int operacion = entrada.nextInt();
+
+                boolean resultado = false;
+                switch (operacion) {
+                    case 1:
+                        resultado = valor1 || valor2;
+                        break;
+                    case 2:
+                        resultado = valor1 && valor2;
+                        break;
+                    case 3:
+                        resultado = valor1 ^ valor2;
+                        break;
+                    default:
+                        System.out.println("Operación inválida");
+                        break;
+                }
+                System.out.println("El resultado es: " + resultado);
+            }
+        }
+    }
+    
+    Punto 4
+    
+    public class Main {
+        public static void main(String[] args) {
+            // Definimos los cuatro números de 10 dígitos cada uno
+            double numero1 = 1189513654;
+            double numero2 = 1579654823;
+            double numero3 = 1975642348;
+            double numero4 = 1358496542;
+
+            // Elevamos cada número a la cuarta potencia
+            double resultado1 = Math.pow(numero1, 4);
+            double resultado2 = Math.pow(numero2, 4);
+            double resultado3 = Math.pow(numero3, 4);
+            double resultado4 = Math.pow(numero4, 4);
+
+            // Imprimimos los resultados
+            System.out.println("El resultado de " + numero1 + " elevado a la cuarta potencia es: " + resultado1);
+            System.out.println("El resultado de " + numero2 + " elevado a la cuarta potencia es: " + resultado2);
+            System.out.println("El resultado de " + numero3 + " elevado a la cuarta potencia es: " + resultado3);
+            System.out.println("El resultado de " + numero4 + " elevado a la cuarta potencia es: " + resultado4);
+        }
+    }
